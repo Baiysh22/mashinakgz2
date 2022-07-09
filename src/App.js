@@ -21,7 +21,6 @@ import Buy from "./components/Buy/Buy";
 const App = () => {
   // ! CRUD-Create, Read, Update, Delate
   // !для хранения данных
-  const [products, setProducts] = useState([]);
   const [oneProduct, setOneProduct] = useState(null);
 
   const INIT_STATE = {
@@ -156,10 +155,12 @@ const App = () => {
               <Details oneProduct={oneProduct} getOneProduct={getOneProduct} />
             }
           />
+          <Route path="/buy" element={<Buy /> } />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </div>
+    
     // <div>
     //   <Header />
     //   <Users />

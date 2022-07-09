@@ -60,10 +60,9 @@ const List = ({ getProducts, products, deleteProduct, pages }) => {
         </Box>
         <TextField
           style={{ width: "200px" ,marginLeft:"50px", 
-          backgroundColor:"white", 
-          color:"black",
-          borderRadius:"400px", 
-          border:"none"}}
+          backgroundColor:"white",
+          borderRadius:"5px", 
+          }}
           value={state}
           onChange={e => setState(e.target.value)}
           variant="outlined"

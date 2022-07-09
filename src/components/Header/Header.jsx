@@ -128,20 +128,20 @@ const Header = () => {
             All
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {/* {pages.map((page) => (
+            {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "white", display: "none" }}
               >
                 {page}
               </Button>
-            ))} */}
+            ))}
 
             <Link to="/brands">
               <Button
                 style={{ backgroundColor: "white", color: "black" }}
-                sx={{ m: 1 }}
+                sx={{ m: 1,}}
                 variant="contained"
                 color={location.pathname === "/brands" ? "success" : "primary"}>
                 Brands
@@ -151,7 +151,7 @@ const Header = () => {
             <Link to="/add">
               <Button
                 style={{ backgroundColor: "white", color: "black" }}
-                sx={{ m: 1 }}
+                sx={{ m: 1 ,ml:80}}
                 variant="contained"
                 color={location.pathname === "/add" ? "success" : "primary"}>
                 Admin

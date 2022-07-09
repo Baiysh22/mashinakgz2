@@ -1,13 +1,70 @@
 import React from 'react';
-
-const Buy = () => {
-  return (
-    <div className='section'>
-      <div className="cart">
-      <img className='cart' src="https://habrastorage.org/web/313/c0e/dc4/313c0edc4eb8432fa68a3a8ef479d5e1.gif" alt="" />
+import Cards from 'react-credit-cards';
+import 'react-credit-cards/es/styles-compiled.css';
+ 
+export default class PaymentForm extends React.Component {
+  state = {
+    cvc: '',
+    expiry: '',
+    focus: '',
+    name: '',
+    number: '',
+  };
+ 
+  handleInputFocus = (e) => {
+    this.setState({ focus: e.target.name });
+  }
+  
+  handleInputChange = (e) => {
+    const { name, value } = e.target;
+    
+    this.setState({ [name]: value });
+  }
+  
+  render() {
+    return (
+      <div id="PaymentForm">
+        <Cards
+          cvc={this.state.cvc}
+          expiry={this.state.expiry}
+          focused={this.state.focus}
+          name={this.state.name}
+          number={this.state.number}
+        />
+        <div className="cart__input">
+        <form>
+        	<input
+            type="tel"
+            name="number"
+            placeholder="Card Number"
+            onChange={this.handleInputChange}
+            onFocus={this.handleInputFocus}
+          />
+          <input
+            type="tel"
+            name="name"
+            placeholder="name"
+            onChange={this.handleInputChange}
+            onFocus={this.handleInputFocus}
+          />
+          <input
+            type="tel"
+            name="cvc"
+            placeholder="cvc"
+            onChange={this.handleInputChange}
+            onFocus={this.handleInputFocus}
+          />
+          <input
+            type="tel"
+            name="expiry"
+            placeholder="expiry"
+            onChange={this.handleInputChange}
+            onFocus={this.handleInputFocus}
+          />
+          ...
+        </form>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Buy;
+    );
+  }
+}

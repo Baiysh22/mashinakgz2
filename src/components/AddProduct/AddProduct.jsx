@@ -28,17 +28,9 @@ const AddProduct = ({ addProduct }) => {
   }
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "500px",
-        backgroundImage:
-          "url(https://st.depositphotos.com/1018174/3768/i/600/depositphotos_37680595-stock-photo-picture-presenting-grey-background.jpg)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        marginTop: 0,
-      }}
-      className="section">
+    <div  className="addproduct">
+      <img  style={{width:"30%"}} src="https://i.pinimg.com/736x/5f/d2/d5/5fd2d58ef6e60e0a3640bffc73900a90.jpg" alt="" />
+      <div>
       <Box
         style={{
           display: "flex",
@@ -51,6 +43,7 @@ const AddProduct = ({ addProduct }) => {
           value={brand}
           label="Brand"
           variant="outlined"
+          color="primary"
           onChange={e => setBrand(e.target.value)}
         />
         <TextField
@@ -76,6 +69,7 @@ const AddProduct = ({ addProduct }) => {
           Save
         </Button>
       </Box>
+    </div>
     </div>
   );
 };

@@ -5,7 +5,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer__inner">
-          <p>Footer</p>
+          <p>About Us</p>
+          <p>Help</p>
+          <p>Contacts</p>
+          <p>Location</p>
         </div>
       </div>
     </footer>

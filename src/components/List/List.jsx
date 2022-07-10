@@ -23,7 +23,7 @@ const List = ({ getProducts, products, deleteProduct, pages }) => {
     setSearchParams({
       q: state,
       _page: currentPage,
-      _limit: 4,
+      _limit: 8,
       price_gte: price[0],
       price_lte: price[1],
     });
